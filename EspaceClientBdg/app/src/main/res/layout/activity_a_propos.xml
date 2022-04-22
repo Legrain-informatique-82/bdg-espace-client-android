@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".AproposActivity">
+
+
+    <!-- 1 | MainActivity RootView -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay"
+            app:theme="@style/ToolBarStyle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/texteAPropos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="32dp"
+                android:text="Lor em i ps um dol or s i t a met , c ons ec t et ur a di pi s c i ng el i t , s ed do ei us mod t empor i c i - di dunt ut l a bor e et dol or e ma gna a l i qua . Ut eni m a d mi ni m v eni a m, qui s nos t r ud"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Lor em i ps um dol or s i t a met , c ons ec t et ur a di pi s c i ng el i t , s ed do ei us mod t empor i c i - di dunt ut l a bor e et dol or e ma gna a l i qua . Ut eni m a d mi ni m v eni a m, qui s nos t r ud" />
+
+            <ImageView
+                android:id="@+id/imgBdg"
+                android:layout_width="201dp"
+                android:layout_height="118dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="32dp"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/texteAPropos"
+                app:srcCompat="@drawable/logo_bdg_a_propos" />
+
+            <TextView
+                android:id="@+id/tvCopyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="1"
+                android:text="Copyright : Legrain Informatique"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Copyright" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/tvCopyright"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Editeur de logiciels"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/imgLegrain"
+                    android:layout_width="212dp"
+                    android:layout_height="157dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/logo_legrain_informatique_4_nico" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <!-- 2 | NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/activity_main_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/activity_main_nav_header"
+        app:menu="@menu/activity_main_menu_drawer" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+<!--        <item name="android:fontFamily">@font/bdg_custom_font</item>-->
+        <item name="android:fontFamily">@font/open_sans</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Toolbar theme. -->
+    <style name="ToolBarStyle" parent="AppTheme">
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyNavigationViewItemStyle" parent="AppTheme">
+        <item name="listPreferredItemPaddingLeft">30dp</item> <!-- pour les groupe de menu si on applique ce theme au NavigationView et app:itemHorizontalPadding="30dp" directement sur le NavigationView pour les menuitem cliquable -->
+<!--        <item name="listPreferredItemPaddingRight">0dp</item>-->
+    </style>
+
+</resources>

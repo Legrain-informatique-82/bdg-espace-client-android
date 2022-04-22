@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.avis_echeance.AvisEcheanceDetailActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/activity_main_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        tools:context=".ui.avis_echeance.AvisEcheanceActivity">
+
+
+        <!-- 1 | MainActivity RootView -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- Toolbar -->
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/activity_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:theme="@style/ToolBarStyle"
+                app:popupTheme="@style/PopupOverlay"/>
+
+            <!-- The main content view -->
+            <FrameLayout
+                android:id="@+id/content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/listViewLigneBonliv"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="166dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="168dp"
+                    android:layout_marginBottom="41dp" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 2 | NavigationView -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/activity_main_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/activity_main_nav_header"
+            app:menu="@menu/activity_main_menu_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

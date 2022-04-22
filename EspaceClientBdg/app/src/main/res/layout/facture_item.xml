@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="document" type="fr.legrain.bdg.espaceclient.api.client.dto.FactureDTO"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView445"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:date="@{document.dateDocument}"
+                        android:gravity="center_horizontal|start"
+                        android:paddingLeft="5dp"
+                        android:textAlignment="textStart"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Date doc" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@{document.codeDocument}"
+                        android:textAlignment="center"
+                        android:textSize="18sp"
+                        tools:text="Code" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="@{document.libelleDocument}"
+                    android:textSize="18sp"
+                    tools:text="Libelle" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="HT"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView44565"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:bigDecimalCurrency="@{document.netHtCalc}"
+                        android:gravity="center_horizontal|end"
+                        android:textAlignment="textEnd"
+                        android:textSize="18sp"
+                        tools:text="HT" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="TTC"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView4456"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:bigDecimalCurrency="@{document.netTtcCalc}"
+                        android:gravity="center_horizontal|end"
+                        android:textAlignment="textEnd"
+                        android:textSize="18sp"
+                        tools:text="TTC" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp"
+                android:text="Reste à régler"
+                android:textStyle='@{document.resteAReglerComplet.compareTo(java.math.BigDecimal.ZERO) > 0 ? "bold" : "normal" }'
+                android:textSize="18sp"
+                android:textColor="@{document.resteAReglerComplet.compareTo(java.math.BigDecimal.ZERO) > 0 ? @color/colorPrimary : @android:color/black}"/>
+
+            <TextView
+                android:id="@+id/tvResteAReglerLigneFacture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:bigDecimalCurrency="@{document.resteAReglerComplet}"
+                android:gravity="center_horizontal|end"
+                android:textAlignment="textEnd"
+                android:textColor="@{document.resteAReglerComplet.compareTo(java.math.BigDecimal.ZERO) > 0 ? @color/colorPrimary : @android:color/black}"
+                android:textSize="18sp"
+                android:textStyle='@{document.resteAReglerComplet.compareTo(java.math.BigDecimal.ZERO) > 0 ? "bold" : "normal" }'
+                tools:text="Reste" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

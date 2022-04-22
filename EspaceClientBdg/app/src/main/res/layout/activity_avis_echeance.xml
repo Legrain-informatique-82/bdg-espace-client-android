@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.avis_echeance.AvisEcheanceActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/activity_main_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start"
+        tools:context=".ui.avis_echeance.AvisEcheanceActivity">
+
+
+        <!-- 1 | MainActivity RootView -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- Toolbar -->
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/activity_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:theme="@style/ToolBarStyle"
+                app:popupTheme="@style/PopupOverlay"/>
+
+            <!-- FrameLayout for our fragments -->
+            <FrameLayout
+                android:id="@+id/activity_main_frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorGrisClair"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center|center_horizontal|center_vertical"
+                        android:text="LISTE DES AVIS D'ECHEANCES"
+                        android:textAlignment="center"
+                        android:textColor="#6E6F71"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="45dp" />
+
+                <ListView
+                    android:id="@+id/listViewDocument"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="10dp">
+
+                </ListView>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- 2 | NavigationView -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/activity_main_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/activity_main_nav_header"
+            app:menu="@menu/activity_main_menu_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/btnFloatActionNouveauBl"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="@dimen/fab_margin"-->
+<!--        app:backgroundTint="@color/colorPrimary"-->
+<!--        app:srcCompat="@drawable/ic_action_preparation" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

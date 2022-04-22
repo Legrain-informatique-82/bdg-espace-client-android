@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fr.legrain.bdg.MainActivity">
+<!--    <item-->
+<!--        android:id="@+id/action_nouveau_bl"-->
+<!--        android:orderInCategory="100"-->
+<!--        android:title="Nouveau BL" />-->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="102"
+        android:title="Préférences"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="103"
+        android:title="Connexion"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="103"
+        android:title="Déconnexion"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Espace Client BDG</string>
+
+    <!-- Used in NavigationDrawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_login">Connexion</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Connexion</string>
+    <string name="action_sign_in_short">Connexion</string>
+    <string name="welcome">"Bienvenue "</string>
+    <string name="invalid_username">Utilisateur incorrect</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Echec de la connexion"</string>
+
+    <string name="default_notification_channel_id">"default_notification_channel_id"</string>
+
+    <!-- Formate une date -->
+    <!--    <string name="format">%1$td/%1$tm/%1$tY</string>-->
+
+</resources>

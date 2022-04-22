@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MesInformationsActivity">
+
+
+    <!-- 1 | MainActivity RootView -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay"
+            app:theme="@style/ToolBarStyle" />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="80dp"-->
+<!--            android:orientation="vertical">-->
+
+
+
+<!--        </LinearLayout>-->
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:indeterminateTint="#CAC8C9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTitreComm3"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorCardHeaderBackground"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Identitée"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCodeTiers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="code tiers" />
+
+                    <TextView
+                        android:id="@+id/tvEntreprise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="Entreprise" />
+
+                    <TextView
+                        android:id="@+id/tvNom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="Nom" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTitreComm2"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorCardHeaderBackground"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Adresse"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvAdresse1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="adresse 1" />
+
+                    <TextView
+                        android:id="@+id/tvAdresse2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="adresse 2" />
+
+                    <TextView
+                        android:id="@+id/tvAdresse3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="adresse 3" />
+
+                    <TextView
+                        android:id="@+id/tvCodePostal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="code postal" />
+
+                    <TextView
+                        android:id="@+id/tvVille"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="ville" />
+
+                    <TextView
+                        android:id="@+id/tvPays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="pays" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardVie3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvTitreComm"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorCardHeaderBackground"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Communication"
+                        android:textAlignment="center"
+                        android:textColor="@color/cardview_dark_background"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvTelephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="Téléphone" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:textAlignment="center"
+                        tools:text="Email" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/img_profil" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <!-- 2 | NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/activity_main_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/activity_main_nav_header"
+        app:menu="@menu/activity_main_menu_drawer" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

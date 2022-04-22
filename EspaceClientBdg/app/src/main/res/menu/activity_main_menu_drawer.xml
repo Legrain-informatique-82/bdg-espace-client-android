@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:title="Accueil">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/activity_main_drawer_accueil"
+                    android:title="Tableau de bord" />
+                <item
+                    android:id="@+id/activity_changer_de_tiers"
+                    android:title="Changer de tiers" />
+                <item
+                    android:id="@+id/activity_main_drawer_mes_informations"
+                    android:title="Mes informations" />
+            </group>
+        </menu>
+    </item>
+
+
+    <item
+        android:title="Documents">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/activity_main_drawer_facture"
+                    android:title="Facture" />
+
+                <item
+                    android:id="@+id/activity_main_drawer_avis_echeance"
+                    android:title="Avis d'échéance" />
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Configuration">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/activity_main_drawer_preferences"
+                    android:title="Préférences" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Aide">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/activity_main_drawer_nous_contacter"
+                    android:title="Nous contacter" />
+                <item
+                    android:id="@+id/activity_main_drawer_a_propos"
+                    android:title="A Propos" />
+
+                <item
+                    android:id="@+id/activity_main_drawer_version_web"
+                    android:title="Version Web" />
+            </group>
+        </menu>
+    </item>
+
+
+</menu>

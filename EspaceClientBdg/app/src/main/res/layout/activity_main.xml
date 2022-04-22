@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".MainActivity">
+
+
+    <!-- 1 | MainActivity RootView -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/activity_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/PopupOverlay"
+            app:theme="@style/ToolBarStyle" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFacture"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/factures"
+                android:textAlignment="viewStart"
+                tools:layout_editor_absoluteX="247dp"
+                tools:layout_editor_absoluteY="280dp" />
+
+            <Button
+                android:id="@+id/btnAvisEcheance"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/avis_echeances"
+                android:textAlignment="viewStart"
+                tools:layout_editor_absoluteX="247dp"
+                tools:layout_editor_absoluteY="280dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal">
+
+<!--            <Button-->
+<!--                android:id="@+id/btnNouveauPreparation"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:background="@drawable/preparation2"-->
+<!--                android:textAlignment="viewStart"-->
+<!--                tools:layout_editor_absoluteX="247dp"-->
+<!--                tools:layout_editor_absoluteY="280dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnNouveauFabrication"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:alpha="0.20"-->
+<!--                android:background="@drawable/fabrication"-->
+<!--                android:enabled="false"-->
+<!--                tools:layout_editor_absoluteX="247dp"-->
+<!--                tools:layout_editor_absoluteY="280dp" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btnNouveauInventaire"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:alpha="0.20"-->
+<!--                android:background="@drawable/inventaire"-->
+<!--                android:enabled="false"-->
+<!--                tools:layout_editor_absoluteX="247dp"-->
+<!--                tools:layout_editor_absoluteY="280dp" />-->
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- 2 | NavigationView -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/activity_main_nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:theme="@style/MyNavigationViewItemStyle"
+        app:itemHorizontalPadding="40dp"
+        app:headerLayout="@layout/activity_main_nav_header"
+        app:menu="@menu/activity_main_menu_drawer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
